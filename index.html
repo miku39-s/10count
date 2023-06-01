@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10カウントチャレンジ</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="10秒ぴったりでタイマーを止めるゲームです。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>10秒カウントチャレンジ</h1>
+        <div id="mainGame">
+            <div id="button">
+                <button type="button" id="blueButton" class="button">初級</button>
+                <button type="button" id="greenButton" class="button">中級</button>
+                <button type="button" id="redButton" class="button">上級</button>
+            </div>
+            <div id="time">
+                <span id="time-display">00.00</span></div>
+            <div>
+                <button id="start">スタート</button>
+                <button id="stop">ストップ</button>
+            </div>
+            <div id="result">
+                <p>今回の結果…<br class="br-sp"><span id="yourrank"></span></p>
+                <button id="reset">リプレイ</button>
+            </div>
+            
+        </div>    
+        <div id="rule">
+            <h2>ルール説明</h2>
+            <ol>
+                <li>ゲームのレベルを選びます。</li>
+                <li>スタートを押すとカウントが始まります。<br class="br-sp"> (秒数は途中で消えます)</li>
+                <li>「これで10秒！」と思ったタイミングでストップを押します。</li>
+            </ol>
+        </div>
+        <div id="different">
+            <h2>レベルの違いについて</h2>
+            <p>スタート後に、秒数表記が消えるまでの時間が違います。
+                <br>
+                初級：7秒後、中級：5秒後、上級：3秒後
+            </p>
+        </div>
+        <div id="rank">
+            <h2>ランク付けについて</h2>
+            <p>ゲーム終了時、秒数への誤差に応じてランクが付与されます。</p>
+            <table>
+                <tr>
+                    <td class="rankLevel">SSS</td><td class="info">±0.00秒差</td>
+                </tr>
+                <tr>
+                    <td class="rankLevel">SS</td><td class="info">±0.01秒～0.05秒差</td>
+                </tr>
+                <tr>
+                    <td class="rankLevel">S</td><td class="info">±0.06秒～0.1秒差</td>
+                </tr>
+                <tr>
+                    <td class="rankLevel">A</td><td class="info">±0.11秒～0.5秒差</td>
+                </tr>
+                <tr>
+                    <td class="rankLevel">B</td><td class="info">±0.51秒～1.0秒差</td>
+                </tr>
+                <tr>
+                    <td class="rankLevel">C</td><td class="info">±1.01秒以上差</td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <p>&copy; 2023 10Count-Charrenge, All Rights Reserves.</p>
+        </footer>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
